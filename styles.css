@@ -278,4 +278,38 @@ body, html {
   .btn:hover {
     box-shadow: 0 0 20px rgba(233, 48, 48, 1);
   }
+.quote-container {
+    position: fixed;                /* Fixed position so it stays on screen while scrolling */
+    bottom: 15px;                   /* 20px from the bottom of the screen */
+    left: 50%;                      /* Center horizontally */
+    transform: translateX(-50%);    /* Center horizontally */
+    font-size: 24px;
+    color: #ffffff;                 /* White color for text (you can change this as needed) */
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+    background-color: transparent;  /* Transparent background to blend with the main background */
+    border-radius: 12px;
+    max-width: 80%;
+    visibility: hidden;             /* Initially hidden */
+    opacity: 0;                     /* Transparent initially */
+    transition: opacity 0.5s ease;  /* Smooth fade effect */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;                  /* Ensure it's above other content */
+    text-shadow: 0 0 15px #ff0000, 0 0 25px #ff0000, 0 0 35px #ff0000, 0 0 45px #ff0000; /* Stronger red glowing text effect */
+    animation: glow 5s infinite;    /* Add glowing animation every 5 seconds */
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 15px #ff0000, 0 0 25px #ff0000, 0 0 35px #ff0000, 0 0 45px #ff0000;
+    }
+    50% {
+        text-shadow: 0 0 25px #ff0000, 0 0 35px #ff0000, 0 0 45px #ff0000, 0 0 55px #ff0000;
+    }
+    100% {
+        text-shadow: 0 0 15px #ff0000, 0 0 25px #ff0000, 0 0 35px #ff0000, 0 0 45px #ff0000;
+    }
+}
 
