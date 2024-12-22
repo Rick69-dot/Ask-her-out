@@ -25,11 +25,24 @@
             }
             
             function moveButton() {
-                var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth) - 85;
-                var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight) - 48;
-                document.getElementById('noButton').style.left = `${x}px`;
-                document.getElementById('noButton').style.top = `${y}px`;
-            }
+    var button = document.getElementById('noButton');
+    var container = document.querySelector('.container'); // Get the container element
+    var buttonWidth = button.offsetWidth;
+    var buttonHeight = button.offsetHeight;
+
+    // Get the container's width and height
+    var containerWidth = container.offsetWidth;
+    var containerHeight = container.offsetHeight;
+
+    // Ensure the button stays within the container's boundaries
+    var x = Math.random() * (containerWidth - buttonWidth); // Keep button inside container width
+    var y = Math.random() * (containerHeight - buttonHeight); // Keep button inside container height
+
+    // Set the new position of the "No" button inside the container
+    button.style.left = `${x}px`;
+    button.style.top = `${y}px`;
+}
+
         </script>
        <canvas></canvas>
        <script src="script.js"></script>
