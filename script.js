@@ -96,3 +96,42 @@ class Petal {
     this.draw()
   }
 }
+
+// Array of lovely quotes
+const quotes = [
+  "You are amazing just as you are! 🌸",
+  "The world is full of beautiful moments. 💕",
+  "Happiness is a choice, and you just made it. 😊",
+  "Every day is a new opportunity to smile. 😄",
+  "Believe in yourself and all that you are. 💖",
+  "You are my today and all of my tomorrows. 💫",
+  "To love and be loved is to feel the sun from both sides. 🌞💛",
+  "Where there is love, there is life. 💕🌱",
+  "Love is a friendship set to music. 🎶💖",
+  "You make me feel like I’m the only one in the world. 🌍💓",
+  "I love you not because of who you are, but because of who I am when I am with you. 💘",
+  "Every moment with you is like a dream come true. 🌟💫"
+];
+
+// Function to display a random quote
+function showRandomQuote() {
+  const quoteElement = document.getElementById('quote');
+  const randomIndex = Math.floor(Math.random() * quotes.length);
+  quoteElement.textContent = quotes[randomIndex];
+
+  // Show the quote by making it visible and fading in
+  const quoteContainer = document.querySelector('.quote-container');
+  quoteContainer.style.visibility = 'visible';
+  quoteContainer.style.opacity = '1'; // Fade-in effect
+
+  // Hide the quote after 3 seconds by fading out
+  setTimeout(() => {
+      quoteContainer.style.opacity = '0'; // Fade-out effect
+  }, 5000); // The quote disappears after 3 seconds
+}
+
+// Show a new random quote every 5 seconds
+setInterval(showRandomQuote, 3000);
+
+// Initial quote display when the page loads
+showRandomQuote();
