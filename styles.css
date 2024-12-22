@@ -278,6 +278,7 @@ body, html {
   .btn:hover {
     box-shadow: 0 0 20px rgba(233, 48, 48, 1);
   }
+
 .quote-container {
     position: fixed;                /* Fixed position so it stays on screen while scrolling */
     bottom: 15px;                   /* 20px from the bottom of the screen */
