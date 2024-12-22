@@ -251,3 +251,18 @@ body {
         font-size: 14px;
     }
 }
+/* Reset the default margin and padding */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  /* Ensure the canvas takes the full screen */
+  canvas {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
